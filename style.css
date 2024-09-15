@@ -468,10 +468,11 @@ span {
     top: 22px;
     width: 0;
     z-index: 1;
-    left: 30px;
+    left: 31px;
     border: medium solid var(--main-color);
     border-width: 10px 0 10px 10px;
     border-color: transparent transparent transparent var(--main-color);
+    rotate: 180deg;
 }
 
 .education .right::after {
@@ -501,13 +502,134 @@ span {
     color: black;
 }
 
+.education .content:hover {
+    background: transparent;
+    color: var(--text-color);
+    transform: scale(1);
+    border: 2px solid var(--main-color);
+    cursor: pointer;
+}
+
+.education .content:hover h2{
+    color: var(--main-color);
+} 
+
 .education .content .decs p {
     font-size: 1.3rem;
     font-weight: 500;
     color: rgb(226, 197, 197);
 }
 
+
+/*Contact Section*/
+.contact h2 {
+    margin: 5rem 0;
+    color: var(--text-color);
+    text-align: center;
+    font-size: 5rem;
+}
+
+.contact form {
+    max-width: 70rem;
+    margin: 1rem auto;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.contact form .input-box {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.contact form .input-box input,
+.contact form textarea {
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    color: var(--text-color);
+    background: var(--bg-color);
+    border-radius: 0.8rem;
+    border: 2px solid var(--main-color);
+    margin: 1rem 0;
+    resize: none;
+}
+
+.contact form .btn {
+    margin-top: 2rem;
+}
+
+/*Footer Section*/
+.footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    padding: 40px 0;
+    background-color: var(--main-color);
+}
+
+.footer .social  {
+    text-align: center;
+    padding-bottom: 25px;
+    color: #000;
+}
+
+.footer .social a {
+    font-size: 25px;
+    color: #000;
+    border: 2px solid #000;
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    margin: 0 10px;
+    transition: 0.3s ease;
+}
+
+.footer .social a:hover {
+    transform: scale(1.2)translateY(-5px);
+    background: #000;
+    color: var(--main-color);
+}
+
+.footer ul {
+    margin-top: 0;
+    padding: 0;
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.footer ul li {
+    display: inline-block;
+    padding: 0 15px;
+}
+
+.footer ul li a {
+    color: black;
+    border-bottom: 3px solid transparent;
+    transition: 0.3s ease;
+}
+
+.footer ul li a:hover {
+    border-bottom: 3px solid black;
+}
+
+.footer .copyright {
+    margin-top: 50px;
+    text-align: center;
+    font-size: 16px;
+    color: black;
+}
+ 
 @media screen and (max-width: 1024px) {
+
+    html {
+        font-size: 55%;
+    }
 
     /*For Header Section*/
     #menu-icon {
@@ -634,5 +756,9 @@ span {
 
     .education .right {
         left: 0%;
+    }
+
+    .footer {
+        padding: 2rem 3%;
     }
 }

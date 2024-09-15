@@ -22,6 +22,6 @@ window.onscroll = () => {
 }
 
 menuIcon.onclick = () => {
-  menuIcon.classList.toggle('bx-x');
+  menuIcon.classList.toggle('fa-times');
   navbar.classList.toggle('active');
 }
