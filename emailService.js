@@ -9,7 +9,7 @@ const validateEmail = (email) => {
 
 // Create a transporter
 const transporter = nodemailer.createTransport({
-  service: 'gmail',
+  service: 'Gmail',
   auth: {
     user: process.env.GMAIL_USER,
     pass: process.env.GMAIL_PASS,
