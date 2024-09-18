@@ -10,12 +10,14 @@ const validateEmail = (email) => {
 // Create a transporter
 const transporter = nodemailer.createTransport({
   service: 'Gmail',  // Or any other email service (e.g., 'Zoho', 'Outlook')
+  port: 587, // (587 for TLS and 465 for SSL), Gmail, Outlook most modern email use TLS by default so we no need to define it explicitly;
+  secure: false, // false for 587 and true for 465
   auth: {
     user: process.env.GMAIL_USER,  // Your email
     pass: process.env.GMAIL_PASS,  // Your password
   },
   tls: {
-    rejectUnauthorized: false,  // For allowing self-signed certificates if needed
+    rejectUnauthorized: true,  // For allowing self-signed certificates if needed
   },
 });
 
@@ -51,6 +53,7 @@ const sendEmail = async ({ name, email, phone, subject, message }) => {
 
     return 'Emails sent successfully';
   } catch (error) {
+    console.log("Email sending failed")
     throw error;
   }
 };
