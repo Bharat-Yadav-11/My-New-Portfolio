@@ -14,8 +14,10 @@
     --bg-color: #000;
     --second-bg-color: #161616;
     --text-color: #fff;
-    --main-color: #E1362C;  
+    /* --main-color: #E1362C;   */
     /* --main-color: #7b4bb7;   */
+    /* --main-color: rgb(163, 65, 255);   */
+    --main-color: #4502d5;  
 }
 
 html {
@@ -338,7 +340,8 @@ span {
 }
 
 .skills .container {
-    background: #e1352c54;
+    /* background: #e1352c54; */
+    background: #402c58;
     color: var(--text-color);
     border-radius: 1rem;
     padding: 2rem;

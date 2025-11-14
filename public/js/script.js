@@ -21,6 +21,10 @@ window.onscroll = () => {
   })
 }
 
+document.addEventListener("contextmenu", (e) => {
+  e.preventDefault();
+}, false);
+
 menuIcon.onclick = () => {
   menuIcon.classList.toggle('fa-times');
   navbar.classList.toggle('active');
@@ -55,6 +59,6 @@ document.getElementById('contactForm').addEventListener('submit', async (e) => {
     document.getElementById('message').value = '';
   } catch (error) {
     console.error('Error:', error);
-    alert('There was an error sending your message.');
+    alert('There was an error while sending your message.');
   }
 });
