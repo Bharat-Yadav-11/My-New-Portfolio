@@ -17,7 +17,7 @@
     /* --main-color: #E1362C;   */
     /* --main-color: #7b4bb7;   */
     /* --main-color: rgb(163, 65, 255);   */
-    --main-color: #4502d5;  
+    --main-color: #5b0eff;  
 }
 
 html {
@@ -341,7 +341,7 @@ span {
 
 .skills .container {
     /* background: #e1352c54; */
-    background: #402c58;
+    background: #5f23e067;
     color: var(--text-color);
     border-radius: 1rem;
     padding: 2rem;
